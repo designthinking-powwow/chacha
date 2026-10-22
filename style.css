@@ -4,7 +4,7 @@
 :root{
   color-scheme:light;
   --ink:#0F0E0E; --muted:#5C5552; --line:#E6E0DB; --soft:#F5F1EE; --paper:#FFFFFF;
-  --cobalt:#1F4BFF; --cobalt-ink:#1638CC; --green:#00875A; --violet:#6A28E0;
+  --cobalt:#1F4BFF; --cobalt-ink:#1638CC; --green:#00875A; --violet:#6A28E0; --rose:#C2255C;
   --sans:"Inter","Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
@@ -76,10 +76,11 @@ strong{font-weight:800}
 .group{margin:28px 0 8px}
 .group-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .tag{display:inline-block;font-weight:800;font-size:14px;color:#fff;padding:4px 10px;border-radius:99px;line-height:1.4}
-.g-people .tag{background:var(--cobalt)}
-.g-ideas .tag{background:var(--green)}
-.g-future .tag{background:var(--violet)}
-.g-hq .tag{background:var(--ink)}
+.g-product .tag{background:var(--cobalt)}
+.g-process .tag{background:var(--rose)}
+.g-team .tag{background:var(--ink)}
+.g-energy .tag{background:var(--green)}
+.g-direction .tag{background:var(--violet)}
 .group-head b{font-size:18px}
 .cards{display:grid;gap:12px;grid-template-columns:1fr}
 @media (min-width:720px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -148,3 +149,41 @@ strong{font-weight:800}
 .site-foot li{margin:4px 0}
 .site-foot a{color:var(--ink)}
 .site-foot .copy{margin-top:24px}
+
+/* problems page */
+.more-link{margin:20px 0 0;font-weight:700}
+.problems{list-style:none;padding:0;margin:12px 0 8px}
+.problems li{margin:0;border-top:1px solid var(--line);padding:12px 0}
+.problems li:last-child{border-bottom:1px solid var(--line)}
+.problems a{display:block;font-weight:700;color:var(--ink);text-decoration:none;line-height:1.6}
+.problems a:hover{color:var(--cobalt-ink)}
+.problems .n{font-family:"Inter",var(--sans);font-weight:800;font-size:14px;color:var(--cobalt-ink);margin-right:10px}
+.problems .to{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+
+/* own-problem block (homepage + 內部問題共創) */
+.own{background:#EEF2FF;border:2px solid var(--cobalt);border-radius:22px;padding:28px 20px;margin:8px 0 40px}
+.own-kicker{margin:0 0 8px;font-weight:800;font-size:14px;color:var(--cobalt-ink);letter-spacing:.04em}
+.own h2{margin:0 0 18px;font-size:clamp(28px,6.4vw,42px);line-height:1.25;font-weight:900}
+.own-steps{list-style:none;counter-reset:o;padding:0;margin:0 0 20px;display:grid;gap:10px;grid-template-columns:1fr}
+.own-steps li{counter-increment:o;margin:0;background:#fff;border-radius:14px;padding:14px 16px 14px 52px;position:relative}
+.own-steps li::before{content:counter(o);position:absolute;left:16px;top:14px;width:26px;height:26px;border-radius:50%;background:var(--cobalt);color:#fff;font-family:"Inter",var(--sans);font-weight:800;font-size:14px;line-height:26px;text-align:center}
+.own-steps b{display:block;font-size:18px;line-height:1.4}
+.own-steps span{display:block;font-size:15px;color:var(--muted);line-height:1.6;margin-top:2px}
+@media (min-width:720px){.own{padding:36px 36px}.own-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.own-steps li{padding:52px 16px 16px}.own-steps li::before{top:16px}}
+.own-sub{margin:0 0 8px;font-size:15px;color:var(--muted);font-weight:500}
+.chips{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{margin:0;background:#fff;border:1.5px solid #C9D3FF;border-radius:99px;padding:5px 12px;font-size:15px;font-weight:500}
+.own .btns{margin-top:0}
+.own-sm{padding:22px 18px;margin:8px 0 32px}
+.own-sm h2{font-size:24px;margin-bottom:14px}
+.own-sm .own-steps{margin-bottom:12px}
+.own-links{margin:0;font-weight:700}
+
+/* methods (tools, not topics) */
+.lead-sm{font-size:19px;line-height:1.7}
+.methods{display:grid;gap:10px;grid-template-columns:1fr;margin:16px 0}
+@media (min-width:720px){.methods{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.methods div{border:1.5px solid var(--line);border-radius:14px;padding:14px 16px}
+.methods .tag{font-size:13px;padding:2px 9px}
+.methods b{display:block;font-size:18px;margin:8px 0 2px}
+.methods div>span:last-child{display:block;font-size:15px;color:var(--muted);line-height:1.65}
