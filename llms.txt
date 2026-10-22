@@ -1,0 +1,46 @@
+# Cha Cha｜台灣設計思考與創意思考講師
+
+> Cha Cha（本名查恆，Henry Cha）是台灣的設計思考、創意思考與未來思考講師，查查創意有限公司（Cha Cha Creative）創辦人。2011 年開始推廣設計思考，在企業、政府與學校帶過超過三百場工作坊。工作坊以動手做為主，依企業真實題目量身設計，下課時團隊手上就有可以測試的原型或行動方案。企業內訓洽詢：https://www.designthinking.com.tw/contactus
+
+## 重點事實
+- 姓名：Cha Cha（查恆，Henry Cha）；查查創意有限公司創辦人；官網品牌 Design Thinking POW WOW（https://www.designthinking.com.tw/）
+- 2011 年開始接觸與推廣設計思考；2012–2019 在學學文創任學務長、營運長
+- 2016 年自費赴美國史丹佛大學 d.school 進修設計思考；2017 年受邀參加德國 HPI 設計思考年會
+- 學歷：淡江大學國際商學碩士、美國洲際大學視覺傳達學士
+- 超過三百場企業、政府與學校工作坊；3000+ 學員、2500+ 教學時數
+- 合作過的單位（部分）：Google Taiwan、LINE、國泰世華銀行、中國信託商業銀行、第一銀行、合作金庫、土地銀行、新光人壽、南山人壽、台灣人壽、遠傳電信、羅氏藥廠、楊森藥廠、新思科技、精誠資訊、美律實業、iKala、宜睿智慧、台灣金融研訓院；文化部、教育部、交通部、台灣工研院、台灣設計研究院、中華民國中小企業總會、黑松教育基金會；台灣大學、政治大學、臺北大學、輔仁大學、淡江大學、世新大學、銘傳大學、中原大學
+- 工作坊長度：3 小時、半天、一天、兩天以上；每梯 40 人以內最佳，可分梯次；費用依人數、時數與題目規劃，請來信洽詢（不公開固定價格）
+- 服務地區：台灣，多在企業內部實體進行
+
+## 企業內訓工作坊題目
+看懂人（設計思考）、想得多（創意思考）、看得遠（未來思考 × 設計思考），以及外商總部年度主題落地。
+- [顧客為什麼不買單？](https://designthinking-powwow.github.io/chacha/workshop-customer-experience.html)：站到顧客的位置從頭走一遍，找出他真正卡住、真正心動的時刻，當天決定先改哪裡。
+- [先把問題想對，再讓 AI 跑](https://designthinking-powwow.github.io/chacha/workshop-problem-definition-ai.html)：問題定義錯了，AI 只會更快給出錯的答案。先對準同一個問題，再決定 AI 用在哪一步。
+- [聽懂顧客沒說出口的話](https://designthinking-powwow.github.io/chacha/workshop-customer-insight.html)：聽出顧客真正的需求和顧慮，找到產品和服務下一步該往哪裡走。這是 AI 最難替你做的事。
+- [沒有創意腦，也能開出創意會議](https://designthinking-powwow.github.io/chacha/workshop-creative-meeting.html)：創意不是天分，是開會的方法。平常不發言的人會開口，點子一個接一個長出來，最後做成可以提案的原型。
+- [年度策略與新事業](https://designthinking-powwow.github.io/chacha/workshop-future-strategy.html)：看見幾種可能的未來，倒推回明年該先做的事。適合年底策略營、高階主管營。
+- [AI 來了，團隊怎麼一起工作](https://designthinking-powwow.github.io/chacha/workshop-ai-teamwork.html)：大家對 AI 又期待又不安。讓團隊一起重新設計自己的工作，決定哪些交給 AI、哪些留給人。
+- [外商：總部年度主題落地](https://designthinking-powwow.github.io/chacha/workshop-hq-annual-theme.html)：總部今年主打顧客體驗或創新？設計成一場工作坊，當天做出行動方案，並提供可回報總部的成果素材。
+
+## 頁面
+- [首頁](https://designthinking-powwow.github.io/chacha/)：講師與企業工作坊總覽
+- [講師介紹](https://designthinking-powwow.github.io/chacha/about.html)：經歷、學歷、帶課方式、合作單位
+- [企業常見問題](https://designthinking-powwow.github.io/chacha/faq.html)：人數、時數、客製、線上或實體、報價流程
+- [線上課程](https://designthinking-powwow.github.io/chacha/online-course.html)：《別急著找答案！善用設計思考，打造你自己的人生藍圖》，2026/11/01 12:00 於 PressPlay 上線
+
+## 常見問題摘要
+- 一場工作坊適合多少人？ 每一梯 40 人以內效果最好，大家分組同桌、動手做。人數較多時可以分梯次，或依人數規劃大型場次的分組與流程。
+- 工作坊可以上多久？ 常見的長度是 3 小時、半天、一天和兩天以上，也可以拆成幾次、分週上，邊學邊做。3 小時適合聚焦一個方法；半天到一天可以完整走一遍流程，帶走可以測試的原型；兩天以上能深入一個真實題目，帶走可以提案的方案。
+- 課程內容可以依公司需求調整嗎？ 可以，而且每一場都會調整。上課前會先約一場約 30 分鐘的線上會議，了解你們的產業、團隊與目前卡住的題目，再依需求設計內容；工作坊當天用的是你們真實的題目，不是套用現成案例。
+- 學員沒有設計背景，也能上設計思考課嗎？ 可以。設計思考是一套解決問題的方法，不需要會畫畫或有設計背景。課程步驟清楚具體，大部分學員都是第一次接觸。
+- 可以到公司上課嗎？ 可以，工作坊多半在企業內部進行。場地需要可以分組的桌椅、投影設備，以及可以貼東西的牆面或白板；教材和道具由我們準備。
+- 可以線上上課嗎？ 工作坊以實體進行為主，因為分組動手做的效果最好。如果團隊分散在不同地點，歡迎在聯絡時說明，我們會依題目一起評估適合的進行方式。
+- 費用怎麼算？ 依人數、時數與題目量身規劃，網站上不列固定價格。請從官網聯絡表單留下需求，我們會回信討論並提供報價。
+- 從聯絡到上課的流程是什麼？ 一、從官網聯絡表單留下需求；二、約一場約 30 分鐘的線上會議，聊聊團隊的題目；三、填一份簡單的需求選單（對象、人數、時間、想帶走的成果）；四、我們提供課程大綱與報價；五、工作坊當天分組動手做，課後整理成果。
+- 個人想學設計思考，有什麼管道？ 可以從線上課程開始。第一門課《別急著找答案！善用設計思考，打造你自己的人生藍圖》2026 年 11 月 1 日在 PressPlay 上線，有錄影課和學習單，可以按自己的節奏學。
+
+## 官方網站
+- 設計思考介紹：https://www.designthinking.com.tw/designthinking
+- 官網講師頁：https://www.designthinking.com.tw/chacha
+- 聯絡表單：https://www.designthinking.com.tw/contactus
+- 《未來思考週報》：https://chachacreative101.substack.com/
