@@ -26,11 +26,13 @@
 - 方向與變化｜[外商：總部年度主題落地](https://designthinking-powwow.github.io/chacha/workshop-hq-annual-theme.html)：總部今年主打顧客體驗或創新？設計成一場工作坊，當天做出行動方案，並提供可回報總部的成果素材。
 
 ## 頁面
+- [醫院與診所的設計思考](https://designthinking-powwow.github.io/chacha/healthcare.html)：醫院教學部、護理部、藥劑部與診所的常見問題（看見價值、流程優化、人才培育），工作坊、顧問專案與執行陪跑三種合作方式。
 - [首頁](https://designthinking-powwow.github.io/chacha/)：講師與企業工作坊總覽
 - [講師介紹](https://designthinking-powwow.github.io/chacha/about.html)：經歷、學歷、帶課方式、合作單位
 - [企業常見問題：這些題目我們都帶過](https://designthinking-powwow.github.io/chacha/problems.html)：過去企業帶來、我們都帶過的 24 個題目，分五類，各自對應的工作坊
 - [企業常見問題（合作）](https://designthinking-powwow.github.io/chacha/faq.html)：人數、時數、客製、線上或實體、報價流程
 - [線上課程](https://designthinking-powwow.github.io/chacha/online-course.html)：《別急著找答案！善用設計思考，打造你自己的人生藍圖》，2026/11/01 12:00 於 PressPlay 上線
+- [講師資料包（給主辦單位）](https://designthinking-powwow.github.io/chacha/speaker-kit.html)：活動主辦單位可直接使用的中英文講師介紹、活動介紹範本、建議連結與標誌
 
 ## 過去企業帶來、我們都帶過的 24 個題目（每一個都可以當工作坊題目）
 - 產品與顧客：新產品開發：點子很多，卻不知道哪個值得做 → [聽懂顧客沒說出口的話](https://designthinking-powwow.github.io/chacha/workshop-customer-insight.html)

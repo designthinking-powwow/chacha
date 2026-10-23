@@ -187,3 +187,22 @@ strong{font-weight:800}
 .methods .tag{font-size:13px;padding:2px 9px}
 .methods b{display:block;font-size:18px;margin:8px 0 2px}
 .methods div>span:last-child{display:block;font-size:15px;color:var(--muted);line-height:1.65}
+
+/* speaker kit (講師資料包) */
+.kit{border:1.5px solid var(--line);border-radius:14px;margin:14px 0;background:#fff;break-inside:avoid}
+.kit-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 16px;border-bottom:1px solid var(--line);background:var(--soft);border-radius:14px 14px 0 0}
+.kit-head b{font-size:15px;line-height:1.4}
+.kit-copy{flex:none;font:inherit;font-weight:800;font-size:14px;line-height:1.2;padding:8px 14px;border-radius:10px;border:2px solid var(--cobalt);background:var(--cobalt);color:#fff;cursor:pointer;min-height:36px}
+.kit-copy:hover{background:var(--cobalt-ink);border-color:var(--cobalt-ink)}
+.kit-copy.ok{background:var(--green);border-color:var(--green)}
+.kit-text{margin:0;padding:14px 16px;font-family:var(--sans);font-size:16px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}
+.kit-logo{display:inline-block;background:var(--soft);border-radius:14px;padding:16px 20px;margin:4px 0 4px}
+.kit-logo img{display:block;width:96px;height:auto}
+@media print{
+  body:has(.kit-page) .site-head,body:has(.kit-page) .site-foot,.kit-page .crumbs,.kit-copy,.kit-page .screen-only{display:none!important}
+  .kit-page h2{margin-top:28px;break-after:avoid}
+  .kit-page .hero{padding-top:0}
+  .kit-head{background:none}
+  body{font-size:14px}
+  .kit-text{font-size:14px}
+}
