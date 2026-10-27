@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>團隊題目健檢｜Design Thinking POW WOW</title>
+<meta name="description" content="回答幾個問題，約 10 分鐘，把團隊卡住的題目說清楚，拿到一頁健檢摘要。Cha Cha 親自看過後回信。企業窗口免費。">
+<meta property="og:title" content="團隊題目健檢｜企業窗口免費">
+<meta property="og:description" content="回答幾個問題，約 10 分鐘，把團隊卡住的題目說清楚。">
+<link rel="icon" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0VX6H9PVX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-Y0VX6H9PVX');</script>
+<style>
+/* 版面：單欄。上方說明＋基本資料表單 → 訪談對話 → 確認問題 → 排方向 → 健檢摘要。配色跟官網同一套（米白底、白卡片、鈷藍），只用淺色。 */
+:root{
+  color-scheme:light;
+  --paper:#FFF8F3; --card:#FFFFFF; --ink:#0F0E0E; --muted:#5C5552; --line:#E9E2DC; --soft:#F5F1EE;
+  --cobalt:#1F4BFF; --tint:#EEF2FF; --coral:#FF3B5C; --ok:#00A86B;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --display:"Inter","Noto Sans TC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:calc(28px + env(safe-area-inset-top,0px)) 160px}
+.wrap{max-width:44rem;margin:0 auto}
+.brand{font:800 12px/1 var(--display);letter-spacing:.14em;color:var(--muted);text-decoration:none}
+.eyebrow{margin:28px 0 8px;font:800 13px/1 var(--display);letter-spacing:.16em;color:var(--cobalt)}
+h1{margin:0;font-weight:900;font-size:clamp(28px,7vw,38px);line-height:1.3;text-wrap:balance}
+.lead{margin:12px 0 0;color:var(--muted)}
+.value{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px;padding:8px 14px;border-radius:999px;background:var(--tint);font-weight:700;font-size:14px}
+.value b{color:var(--cobalt)}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin:22px 0 18px;padding:0;list-style:none}
+.steps li{font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--card)}
+.steps li.on{border-color:var(--cobalt);color:var(--cobalt);background:var(--tint);font-weight:700}
+.steps li.done{color:var(--ok);border-color:var(--ok)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 20px 22px;box-shadow:0 1px 2px rgba(15,14,14,.04),0 8px 24px rgba(15,14,14,.04)}
+.card h2{margin:0 0 4px;font-size:18px}
+.hint{font-size:14px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:12px 14px;margin-top:16px}
+label.f{display:flex;flex-direction:column;gap:5px;font-size:14px;color:var(--muted);min-width:0}
+label.f input,label.f select{font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+label.f input:focus,label.f select:focus,textarea:focus{outline:2px solid var(--cobalt);outline-offset:1px;border-color:transparent}
+.sep{grid-column:1/-1;border-top:1px solid var(--line);margin:6px 0 0;padding-top:12px;font-weight:700;font-size:15px;color:var(--ink)}
+fieldset.helps{grid-column:1/-1;border:1px solid var(--line);border-radius:12px;padding:10px 14px 12px;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:6px 14px}
+fieldset.helps legend{font-size:14px;color:var(--muted);padding:0 6px}
+.chk{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--ink)}
+.chk input{width:18px;height:18px;margin-top:4px;accent-color:var(--cobalt);flex:none}
+.consent{grid-column:1/-1;margin-top:4px;font-size:14px;color:var(--muted)}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.btn{font:inherit;font-weight:700;border:0;border-radius:999px;padding:12px 24px;background:var(--cobalt);color:#fff;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--cobalt);border:1px solid var(--cobalt)}
+.btn:disabled{opacity:.45;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+.err{color:#B4232F;font-size:14px;margin:10px 0 0}
+.chat{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.msg{max-width:88%;padding:12px 16px;border-radius:16px;white-space:pre-wrap;overflow-wrap:anywhere}
+.ai{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-top-left-radius:4px}
+.me{align-self:flex-end;background:var(--cobalt);color:#fff;border-top-right-radius:4px}
+.who{font-size:12px;color:var(--muted);margin-bottom:2px;letter-spacing:.04em}
+.me .who{color:rgba(255,255,255,.8)}
+.thinking{color:var(--muted)}
+.composer{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-top:10px;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+.composer .in{max-width:44rem;margin:0 auto;display:flex;gap:8px;align-items:flex-end}
+.composer .meta{max-width:44rem;margin:0 auto 6px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:10px}
+textarea{flex:1;min-width:0;font:inherit;resize:none;min-height:48px;max-height:160px;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.panel{margin-top:24px}
+.pov{font-size:17px;font-weight:700;background:var(--tint);border-left:4px solid var(--cobalt);border-radius:12px;padding:14px 16px;margin-top:10px}
+.opts{display:grid;gap:10px;margin-top:12px}
+.opt{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.opt:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+.opt .rk{grid-row:span 3;width:34px;height:34px;border-radius:50%;border:2px dashed var(--line);display:flex;align-items:center;justify-content:center;font:800 15px var(--display);color:var(--muted)}
+.opt.ranked{border-color:var(--cobalt)}
+.opt.ranked .rk{border:0;background:var(--cobalt);color:#fff}
+.opt b{font-size:16px}
+.opt .what,.opt .w2{font-size:14px;color:var(--muted)}
+.report h3{font-size:15px;margin:18px 0 4px;color:var(--cobalt)}
+.report p,.report li{margin:4px 0}
+.report ol,.report ul{padding-left:1.3em;margin:4px 0}
+.next{margin-top:18px;padding:14px 16px;border-radius:12px;background:var(--soft);font-size:15px}
+.foot{margin-top:28px;text-align:center;font-size:13px;color:var(--muted)}
+.foot a{color:var(--cobalt);font-weight:700}
+@media print{body{background:#fff;padding:0}.composer,.row,.steps,.value,.foot,.chat,#start,#define,#ideate{display:none!important}.card{box-shadow:none;border:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="https://www.designthinking.com.tw/" target="_blank" rel="noopener">DESIGN THINKING POW WOW</a>
+  <p class="eyebrow">團隊題目健檢</p>
+  <h1>先把團隊卡住的題目，說清楚</h1>
+  <p class="lead">回答幾個問題，大約 10 分鐘。AI 會陪你把狀況理清楚、確認真正的問題，再整理成一頁健檢摘要。Cha Cha 會親自看過，2 個工作天內回信給你。</p>
+  <div class="value"><span>一份健檢價值 NT$3,000</span><b>企業窗口免費</b></div>
+
+  <ol class="steps" id="steps">
+    <li data-s="1">1 了解狀況</li><li data-s="2">2 確認問題</li><li data-s="3">3 想方向</li><li data-s="4">4 排優先</li><li data-s="5">5 健檢摘要</li>
+  </ol>
+
+  <section class="card" id="start">
+    <h2>先填基本資料</h2>
+    <p class="hint">選擇題填過的，AI 就不會再問。請不要輸入個人資料或公司機密數字，描述情況就夠了。</p>
+    <form id="form" class="grid" novalidate>
+      <label class="f">公司名稱<input name="company" required maxlength="60" autocomplete="organization"></label>
+      <label class="f">統一編號<input name="taxId" required inputmode="numeric" maxlength="8" pattern="\d{8}" placeholder="8 碼"></label>
+      <label class="f">你的名字<input name="name" required maxlength="30" autocomplete="name"></label>
+      <label class="f">公司 email<input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="摘要和回信會寄到這裡"></label>
+      <div class="trap" aria-hidden="true"><label>網站<input name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="sep">團隊的狀況</div>
+      <label class="f">你的角色<select name="role" required><option value="">請選擇</option><option>人資／教育訓練</option><option>部門主管</option><option>高階主管／老闆</option><option>專案負責人</option><option>其他</option></select></label>
+      <label class="f">產業<select name="industry" required><option value="">請選擇</option><option>科技／半導體</option><option>製造業</option><option>醫療／醫院</option><option>金融／保險</option><option>零售／餐飲／消費品</option><option>服務業／顧問</option><option>政府／公部門</option><option>學校／教育</option><option>非營利組織</option><option>其他</option></select></label>
+      <label class="f">公司規模<select name="size" required><option value="">請選擇</option><option>50 人以下</option><option>50–200 人</option><option>200–1,000 人</option><option>1,000 人以上</option></select></label>
+      <label class="f">這件事主要跟哪一類有關<select name="area" required><option value="">請選擇</option><option>產品與顧客</option><option>流程與效率</option><option>溝通與團隊：上對下</option><option>溝通與團隊：下對上</option><option>溝通與團隊：跨部門</option><option>溝通與團隊：世代差異</option><option>溝通與團隊：接班與傳承</option><option>創意與動能（點子少、沒動力）</option><option>方向與變化：共識營／年度方向</option><option>方向與變化：組織變革</option><option>方向與變化：總部年度主題</option><option>方向與變化：AI 導入</option><option>還說不清楚</option></select></label>
+      <label class="f">大約牽涉多少人<select name="people" required><option value="">請選擇</option><option>10 人以下</option><option>10–30 人</option><option>30–100 人</option><option>100 人以上</option></select></label>
+      <label class="f">希望什麼時候開始處理<select name="when" required><option value="">請選擇</option><option>一個月內</option><option>1–3 個月內</option><option>3–6 個月內</option><option>還沒有時程</option></select></label>
+      <label class="f">誰做最後決定<select name="decider" required><option value="">請選擇</option><option>我自己</option><option>我的直屬主管</option><option>高階主管／老闆</option><option>還不確定</option></select></label>
+      <label class="f">過去一年辦過相關的內訓嗎<select name="past" required><option value="">請選擇</option><option>沒有辦過</option><option>辦過講座型課程</option><option>辦過工作坊（有動手做）</option><option>請過顧問長期協助</option><option>不確定</option></select></label>
+      <label class="f">那次的效果<select name="pastEffect"><option>（沒辦過可略過）</option><option>有明顯改變</option><option>當下有感，後來沒延續</option><option>沒什麼改變</option><option>不確定</option></select></label>
+      <label class="f">每年教育訓練預算大約（選填）<select name="budget"><option>不方便透露</option><option>10 萬以下</option><option>10–30 萬</option><option>30–100 萬</option><option>100 萬以上</option></select></label>
+      <fieldset class="helps"><legend>希望我們協助哪些部分（選填，可複選）</legend>
+        <label class="chk"><input type="checkbox" name="help" value="課前問卷與分組">課前問卷與分組</label>
+        <label class="chk"><input type="checkbox" name="help" value="教材與物料準備">教材與物料準備</label>
+        <label class="chk"><input type="checkbox" name="help" value="場地安排">場地安排</label>
+        <label class="chk"><input type="checkbox" name="help" value="餐點與茶點">餐點與茶點</label>
+        <label class="chk"><input type="checkbox" name="help" value="活動攝影或精華影片">活動攝影或精華影片</label>
+        <label class="chk"><input type="checkbox" name="help" value="成果報告書（可交給主管）">成果報告書（可交給主管）</label>
+        <label class="chk"><input type="checkbox" name="help" value="向高層簡報成果">向高層簡報成果</label>
+        <label class="chk"><input type="checkbox" name="help" value="結束後 30 天追蹤">結束後 30 天追蹤</label>
+      </fieldset>
+      <label class="chk consent"><input type="checkbox" name="consent" required>我同意：健檢內容會交給 Cha Cha 本人，用來回信給我。去除公司名稱和可辨識的細節後，內容可能用於整理企業常見問題，不會公開。</label>
+      <div class="row" style="grid-column:1/-1;margin-top:4px"><button class="btn" id="go" type="submit">開始健檢</button><span class="hint">大約 10 分鐘，可以隨時停下來想。</span></div>
+      <p class="err" id="formErr" hidden style="grid-column:1/-1"></p>
+    </form>
+  </section>
+
+  <div class="chat" id="chat" aria-live="polite"></div>
+  <div class="row" id="enough" hidden><button class="btn ghost" id="toDefine" type="button">我說得差不多了，下一步</button></div>
+
+  <section class="panel" id="define" hidden>
+    <h2 style="font-size:18px;margin:0">步驟 2｜這是你們真正想解決的問題嗎？</h2>
+    <div class="pov" id="pov"></div>
+    <div class="row"><button class="btn" id="povYes" type="button">對，就是這個</button><button class="btn ghost" id="povFix" type="button">不太對，我補充</button></div>
+  </section>
+  <div class="chat" id="chatDef" aria-live="polite"></div>
+
+  <section class="panel" id="ideate" hidden>
+    <h2 style="font-size:18px;margin:0">步驟 3–4｜可以從這幾個方向處理，請排出優先順序</h2>
+    <p class="hint">依序點選：第一個點的就是第 1 優先，再點一次可以取消。至少排出前 3 個。</p>
+    <div class="opts" id="opts"></div>
+    <div class="row"><button class="btn" id="rankDone" type="button" disabled>排好了</button></div>
+  </section>
+  <div class="chat" id="chat2" aria-live="polite"></div>
+
+  <section class="card panel report" id="report" hidden>
+    <h2>健檢摘要</h2>
+    <div id="reportBody"></div>
+    <div class="next" id="nextBox" hidden>這份摘要已經交給 Cha Cha。他會親自看過，<b>2 個工作天內</b>回信到你的 email，附上具體的建議。</div>
+    <div class="row" id="reportBtns" hidden><button class="btn" id="print" type="button">存成 PDF／列印</button><button class="btn ghost" id="copy" type="button">複製摘要</button></div>
+  </section>
+
+  <p class="foot">查查創意｜Cha Cha　·　<a href="https://www.designthinking.com.tw/workshops" target="_blank" rel="noopener">企業工作坊</a></p>
+</div>
+
+<div class="composer" id="composer" hidden>
+  <div class="meta"><span id="progress"></span><span>Enter 送出，Shift＋Enter 換行</span></div>
+  <div class="in">
+    <textarea id="box" rows="1" maxlength="600" placeholder="在這裡回答…" aria-label="你的回答"></textarea>
+    <button class="btn" id="send" type="button">送出</button>
+  </div>
+</div>
+
+<script>
+// 中繼站網址（Cloudflare Worker，金鑰在那邊，網頁裡沒有）
+const API = "https://team-checkup.chahenry.workers.dev";
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ERR = {
+  tax_id: "統一編號好像不對，請再確認一下（8 碼數字）。", email: "email 格式好像不對。", consent: "請勾選同意，才能開始。", missing: "公司名稱和名字都要填。",
+  too_many: "今天這個網路或這個 email 已經做過幾次了，明天再試，或直接寫信給我們。", month_full: "這個月的免費名額已經滿了，下個月 1 號會再開放。也可以直接到官網「聯絡我們」留言。",
+  expired: "這次健檢已經超過兩天沒有動作，請重新開始。", done: "這份健檢已經完成了。", too_many_calls: "這份健檢的對話次數到上限了，請按「下一步」整理摘要。",
+  refusal: "這段內容 AI 沒辦法處理，請換個說法再試一次。",
+};
+const errText = e => ERR[e] || "連線出了點問題，請再試一次。";
+let state = "", stage = 0, busy = false, asked = 0, max = 6, options = [], ranking = [];
+const isTest = new URLSearchParams(location.search).get("test") === "1";
+
+async function call(path, data) {
+  const r = await fetch(API + path, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ state, ...data }) });
+  let j = {}; try { j = await r.json(); } catch (e) {}
+  if (!r.ok || j.error) throw new Error(j.error || "network");
+  if (j.state) state = j.state;   // 健檢進行到哪裡，由中繼站簽章後交給網頁保管
+  return j;
+}
+function setStage(n) { stage = n; document.querySelectorAll("#steps li").forEach(li => { const s = +li.dataset.s; li.className = s < n ? "done" : s === n ? "on" : ""; }); }
+function bubble(role, text, where) {
+  const d = document.createElement("div"); d.className = "msg " + (role === "user" ? "me" : "ai");
+  d.innerHTML = '<div class="who">' + (role === "user" ? "你" : "健檢訪談") + "</div>";
+  const t = document.createElement("div"); t.textContent = text; d.append(t);
+  $(where || (stage >= 5 ? "chat2" : stage === 2 ? "chatDef" : "chat")).append(d);
+  requestAnimationFrame(() => d.scrollIntoView({ block: "end", behavior: "smooth" }));
+  return d;
+}
+function thinking(where) { const d = bubble("assistant", "…", where); d.classList.add("thinking"); return d; }
+function setBusy(b) { busy = b; ["send", "toDefine", "povYes", "povFix", "rankDone"].forEach(id => { $(id).disabled = b || (id === "rankDone" && ranking.length < 3); }); }
+function progress() { $("progress").textContent = stage === 1 ? "第 " + Math.min(asked + 1, max) + "／" + max + " 題" : ""; }
+function track(name, p) { try { gtag("event", name, p || {}); } catch (e) {} }
+
+$("form").addEventListener("submit", async e => {
+  e.preventDefault(); if (busy) return;
+  const f = new FormData($("form")); $("formErr").hidden = true;
+  for (const k of ["company", "taxId", "name", "email", "role", "industry", "size", "area", "people", "when", "decider", "past"]) {
+    if (!String(f.get(k) || "").trim()) { $("formErr").textContent = "還有欄位沒填完喔。"; $("formErr").hidden = false; return; }
+  }
+  if (!f.get("consent")) { $("formErr").textContent = ERR.consent; $("formErr").hidden = false; return; }
+  const L = { role: "角色", industry: "產業", size: "公司規模", area: "主要相關", people: "牽涉人數", when: "希望開始", decider: "最後決定者", past: "過去一年相關內訓", pastEffect: "那次效果", budget: "年度教育訓練預算" };
+  const basics = Object.keys(L).map(k => L[k] + "：" + f.get(k)).join("\n") + "\n希望協助的部分：" + (f.getAll("help").join("、") || "未勾選");
+  $("go").disabled = true; $("go").textContent = "準備第一題…"; busy = true;
+  try {
+    const j = await call("/start", { company: f.get("company"), taxId: String(f.get("taxId")).trim(), name: f.get("name"), email: f.get("email"), website: f.get("website"), consent: true, basics, test: isTest });
+    max = j.max || 6;
+    $("start").hidden = true; setStage(1); bubble("assistant", j.question);
+    $("composer").hidden = false; progress(); $("box").focus({ preventScroll: true });
+    track("checkup_start");
+  } catch (err) { $("formErr").textContent = errText(err.message); $("formErr").hidden = false; }
+  finally { $("go").disabled = false; $("go").textContent = "開始健檢"; busy = false; }
+});
+
+async function onSend() {
+  const v = $("box").value.trim(); if (!v || busy) return;
+  $("box").value = ""; $("box").style.height = "auto"; bubble("user", v);
+  if (stage === 1) {
+    setBusy(true); const t = thinking();
+    try {
+      const j = await call("/answer", { answer: v }); t.remove(); asked = j.asked || asked + 1;
+      $("enough").hidden = asked < 3;
+      if (j.next === "define") return toDefine();
+      bubble("assistant", j.question); progress();
+    } catch (err) { t.remove(); bubble("assistant", errText(err.message)); if (err.message === "too_many_calls") $("enough").hidden = false; }
+    finally { setBusy(false); }
+    return;
+  }
+  if (stage === 2) return toDefine(v);
+  if (stage === 5) { $("composer").hidden = true; return makeReport(v); }
+}
+
+async function toDefine(fix) {
+  setStage(2); $("composer").hidden = true; $("enough").hidden = true; $("define").hidden = false;
+  $("pov").innerHTML = '<span class="thinking">正在整理問題定義…</span>'; $("define").scrollIntoView({ behavior: "smooth" }); setBusy(true);
+  try { const j = await call("/define", { fix: fix || "" }); $("pov").textContent = j.pov; }
+  catch (err) { $("pov").innerHTML = '<span class="err">' + esc(errText(err.message)) + "</span>"; }
+  finally { setBusy(false); }
+}
+
+async function toIdeate() {
+  setStage(3); $("define").querySelector(".row").hidden = true; $("ideate").hidden = false;
+  $("opts").innerHTML = '<p class="thinking">正在想可以處理的方向，大約 20 秒…</p>'; $("ideate").scrollIntoView({ behavior: "smooth" }); setBusy(true);
+  try { const j = await call("/ideate", {}); options = j.options || []; ranking = []; renderOpts(); setStage(4); }
+  catch (err) { $("opts").innerHTML = '<p class="err">' + esc(errText(err.message)) + '</p><button class="btn" type="button" id="retryIdeate">再試一次</button>'; $("retryIdeate").onclick = toIdeate; }
+  finally { setBusy(false); }
+}
+function renderOpts() {
+  $("opts").innerHTML = options.map((o, i) => {
+    const r = ranking.indexOf(i);
+    return '<button type="button" class="opt' + (r >= 0 ? " ranked" : "") + '" data-i="' + i + '"><span class="rk">' + (r >= 0 ? r + 1 : "") + "</span><b>" + esc(o.title) + '</b><span class="what">' + esc(o.what) + '</span><span class="w2">適合：' + esc(o.who) + "</span></button>";
+  }).join("");
+  $("opts").querySelectorAll(".opt").forEach(b => b.onclick = () => {
+    if (stage !== 4) return;
+    const i = +b.dataset.i, r = ranking.indexOf(i);
+    if (r >= 0) ranking.splice(r, 1); else ranking.push(i);
+    renderOpts(); $("rankDone").disabled = busy || ranking.length < 3;
+  });
+}
+function toTest() {
+  setStage(5); $("rankDone").hidden = true;
+  $("opts").querySelectorAll(".opt").forEach(b => { b.disabled = true; b.style.cursor = "default"; });
+  bubble("assistant", "你把「" + options[ranking[0]].title + "」排在第一。\n如果先從這個方向開始，你覺得最需要誰的支持，或最擔心哪裡卡住？");
+  $("composer").hidden = false; progress(); $("box").focus();
+}
+
+async function makeReport(feedback) {
+  setBusy(true); $("report").hidden = false;
+  $("reportBody").innerHTML = '<p class="thinking">正在整理健檢摘要，大約 30–60 秒，請不要關掉這一頁…</p>'; $("report").scrollIntoView({ behavior: "smooth" });
+  try {
+    const j = await call("/report", { ranking, feedback }); const r = j.report;
+    const list = (a, tag) => "<" + tag + ">" + (a || []).map(x => "<li>" + esc(x) + "</li>").join("") + "</" + tag + ">";
+    $("reportBody").innerHTML =
+      "<h3>現況</h3><p>" + esc(r.situation) + "</p>" +
+      "<h3>確認後的問題</h3><p><b>" + esc(r.problem) + "</b></p>" +
+      "<h3>你們排出的優先順序</h3>" + list(r.priority, "ol") +
+      "<h3>顧慮與限制</h3>" + list(r.concerns, "ul") +
+      "<h3>你們可以先做的事</h3>" + list(r.actions, "ol") +
+      "<h3>如果需要外部協助</h3><p>" + esc(r.outside_help) + "</p>" +
+      "<h3>還需要釐清</h3>" + list(r.unclear, "ul");
+    $("nextBox").hidden = false; $("reportBtns").hidden = false;
+    document.querySelectorAll("#steps li").forEach(li => li.className = "done");
+    track("checkup_report");
+  } catch (err) {
+    $("reportBody").innerHTML = '<p class="err">摘要沒有整理成功：' + esc(errText(err.message)) + '</p><button class="btn" type="button" id="retry">再試一次</button>';
+    $("retry").onclick = () => makeReport(feedback);
+  } finally { setBusy(false); }
+}
+
+$("send").onclick = onSend;
+$("box").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); onSend(); } });
+$("box").addEventListener("input", e => { e.target.style.height = "auto"; e.target.style.height = Math.min(160, e.target.scrollHeight) + "px"; });
+$("toDefine").onclick = () => toDefine();
+$("povYes").onclick = toIdeate;
+$("povFix").onclick = () => { setStage(2); bubble("assistant", "好，哪裡不太對？請直接補充或改寫。"); $("composer").hidden = false; $("box").focus(); };
+$("rankDone").onclick = toTest;
+$("print").onclick = () => window.print();
+$("copy").onclick = () => {
+  const t = "團隊題目健檢｜摘要\n\n" + $("reportBody").innerText;
+  navigator.clipboard.writeText(t).then(() => { $("copy").textContent = "已複製"; setTimeout(() => $("copy").textContent = "複製摘要", 2000); }).catch(() => {});
+};
+</script>
+</body>
+</html>
