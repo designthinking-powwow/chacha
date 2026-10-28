@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
 <title>團隊題目健檢｜Design Thinking POW WOW</title>
 <meta name="description" content="回答幾個問題，約 10 分鐘，把團隊卡住的題目說清楚，拿到一頁健檢摘要。Cha Cha 親自看過後回信。企業窗口免費。">
 <meta property="og:title" content="團隊題目健檢｜企業窗口免費">
@@ -137,6 +138,12 @@ textarea{flex:1;min-width:0;font:inherit;resize:none;min-height:48px;max-height:
     </form>
   </section>
 
+  <section class="card" id="invite" hidden>
+    <h2>這份健檢需要邀請連結</h2>
+    <p>這份健檢是寄給合作洽談中的企業窗口使用。如果您想了解，歡迎從官網聯絡我們。</p>
+    <div class="row"><a class="btn" style="text-decoration:none" href="https://www.designthinking.com.tw/contactus" target="_blank" rel="noopener">到官網聯絡我們</a></div>
+  </section>
+
   <div class="chat" id="chat" aria-live="polite"></div>
   <div class="row" id="enough" hidden><button class="btn ghost" id="toDefine" type="button">我說得差不多了，下一步</button></div>
 
@@ -183,10 +190,15 @@ const ERR = {
   too_many: "今天這個網路或這個 email 已經做過幾次了，明天再試，或直接寫信給我們。", month_full: "這個月的免費名額已經滿了，下個月 1 號會再開放。也可以直接到官網「聯絡我們」留言。",
   expired: "這次健檢已經超過兩天沒有動作，請重新開始。", done: "這份健檢已經完成了。", too_many_calls: "這份健檢的對話次數到上限了，請按「下一步」整理摘要。",
   refusal: "這段內容 AI 沒辦法處理，請換個說法再試一次。",
+  invite_used: "這個邀請連結的使用次數已經滿了。如果還想再做一份，請直接回信給 Cha Cha。", day_full: "今天的名額已經滿了，請明天再試，或直接回信給 Cha Cha。",
 };
 const errText = e => ERR[e] || "連線出了點問題，請再試一次。";
 let state = "", stage = 0, busy = false, asked = 0, max = 6, options = [], ranking = [];
 const isTest = new URLSearchParams(location.search).get("test") === "1";
+// 邀請碼：只有收到 Cha Cha 寄的邀請連結（?k=…）才能使用
+const inviteKey = (new URLSearchParams(location.search).get("k") || "").trim();
+function noInvite() { $("start").hidden = true; $("steps").hidden = true; $("invite").hidden = false; }
+if (!/^[A-Za-z0-9]{6,16}$/.test(inviteKey)) noInvite();
 
 async function call(path, data) {
   const r = await fetch(API + path, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ state, ...data }) });
@@ -220,12 +232,12 @@ $("form").addEventListener("submit", async e => {
   const basics = Object.keys(L).map(k => L[k] + "：" + f.get(k)).join("\n") + "\n希望協助的部分：" + (f.getAll("help").join("、") || "未勾選");
   $("go").disabled = true; $("go").textContent = "準備第一題…"; busy = true;
   try {
-    const j = await call("/start", { company: f.get("company"), taxId: String(f.get("taxId")).trim(), name: f.get("name"), email: f.get("email"), website: f.get("website"), consent: true, basics, test: isTest });
+    const j = await call("/start", { company: f.get("company"), taxId: String(f.get("taxId")).trim(), name: f.get("name"), email: f.get("email"), website: f.get("website"), consent: true, basics, test: isTest, k: inviteKey });
     max = j.max || 6;
     $("start").hidden = true; setStage(1); bubble("assistant", j.question);
     $("composer").hidden = false; progress(); $("box").focus({ preventScroll: true });
     track("checkup_start");
-  } catch (err) { $("formErr").textContent = errText(err.message); $("formErr").hidden = false; }
+  } catch (err) { if (err.message === "invite_invalid") { noInvite(); return; } $("formErr").textContent = errText(err.message); $("formErr").hidden = false; }
   finally { $("go").disabled = false; $("go").textContent = "開始健檢"; busy = false; }
 });
 
