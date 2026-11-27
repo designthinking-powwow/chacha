@@ -6,7 +6,6 @@
 - 姓名：Cha Cha（查恆，Henry Cha）；查查創意有限公司創辦人；官網品牌 Design Thinking POW WOW（https://www.designthinking.com.tw/）
 - 2011 年開始接觸與推廣設計思考；2012–2019 在學學文創任學務長、營運長
 - 2016 年自費赴美國史丹佛大學 d.school 進修設計思考；2017 年受邀參加德國 HPI 設計思考年會
-- 學歷：淡江大學國際商學碩士、美國洲際大學視覺傳達學士
 - 超過三百場企業、政府與學校工作坊；3000+ 學員、2500+ 教學時數
 - 合作過的單位（部分）：Google Taiwan、LINE、國泰世華銀行、中國信託商業銀行、第一銀行、合作金庫、土地銀行、新光人壽、南山人壽、台灣人壽、遠傳電信、羅氏藥廠、楊森藥廠、新思科技、精誠資訊、美律實業、iKala、宜睿智慧、台灣金融研訓院；文化部、教育部、交通部、台灣工研院、台灣設計研究院、中華民國中小企業總會、黑松教育基金會；台灣大學、政治大學、臺北大學、輔仁大學、淡江大學、世新大學、銘傳大學、中原大學
 - 工作坊長度：3 小時、半天、一天、兩天以上；每梯 40 人以內最佳，可分梯次；費用依人數、時數與題目規劃，請來信洽詢（不公開固定價格）
@@ -28,7 +27,7 @@
 ## 頁面
 - [醫院與診所的設計思考](https://designthinking-powwow.github.io/chacha/healthcare.html)：醫院教學部、護理部、藥劑部與診所的常見問題（看見價值、流程優化、人才培育），工作坊、顧問專案與執行陪跑三種合作方式。
 - [首頁](https://designthinking-powwow.github.io/chacha/)：講師與企業工作坊總覽
-- [講師介紹](https://designthinking-powwow.github.io/chacha/about.html)：經歷、學歷、帶課方式、合作單位
+- [講師介紹](https://designthinking-powwow.github.io/chacha/about.html)：經歷、帶課方式、合作單位
 - [企業常見問題：這些題目我們都帶過](https://designthinking-powwow.github.io/chacha/problems.html)：過去企業帶來、我們都帶過的 24 個題目，分五類，各自對應的工作坊
 - [企業常見問題（合作）](https://designthinking-powwow.github.io/chacha/faq.html)：人數、時數、客製、線上或實體、報價流程
 - [線上課程](https://designthinking-powwow.github.io/chacha/online-course.html)：《別急著找答案！善用設計思考，打造你自己的人生藍圖》，2026/11/01 12:00 於 PressPlay 上線
